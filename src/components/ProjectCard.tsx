@@ -47,23 +47,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         paddingBottom="24"
         gap="l"
       >
-        {title && (
+        
           <Flex flex={5}>
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
+              <Text variant="heading-strong-xl">the comon siz project built with nextjs and supabase</Text>
             </Heading>
           </Flex>
-        )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+        
+        {/* {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
           <Column flex={7} gap="16">
             {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
-            {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
-                {description}
-              </Text>
-            )}
-            <Flex gap="24" wrap>
-              {content?.trim() && (
+            {description?.trim() && ( */}
+               {/* <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+                {/* {description} */}
+               {/* </Text>  */}
+            {/* )}
+            <Flex gap="24" wrap> */}
+              {/* {content?.trim() && (
                 <SmartLink
                   suffixIcon="arrowRight"
                   style={{ margin: "0", width: "fit-content" }}
@@ -71,8 +71,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 >
                   <Text variant="body-default-s">Read case study</Text>
                 </SmartLink>
-              )}
-              {link && (
+              )} */}
+              {/* {link && (
                 <SmartLink
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: "0", width: "fit-content" }}
@@ -80,10 +80,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 >
                   <Text variant="body-default-s">View project</Text>
                 </SmartLink>
-              )}
-            </Flex>
-          </Column>
-        )}
+              )} */}
+            {/* </Flex>
+          </Column> */}
+        {/* )} */}
       </Flex>
     </Column>
   );

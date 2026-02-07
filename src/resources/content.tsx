@@ -5,7 +5,7 @@ import Link from "next/link";
 const person: Person = {
   firstName: "Fiston",
   lastName: "Kalambayi",
-  name: `Fiston kalambayi`,
+  name: "Fiston Kalambayi",
   role: "web developer",
   avatar: "/images/avatar.jpg", // optional: set to null if you don't want to display an avatar
   email: "kalambayifiston7@gmail.com",

@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 
 import {
   HiArrowUpRight,
@@ -56,7 +56,6 @@ export const iconLibrary: Record<string, IconType> = {
   linkedin: FaLinkedin,
   x: FaX,
   twitter: FaXTwitter,
-  threads: FaThreads,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,

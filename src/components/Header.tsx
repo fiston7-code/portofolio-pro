@@ -73,7 +73,7 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
+          {display.location && <Row s={{ hide: false }}>{person.location}</Row>}
         </Row>
         <Row fillWidth horizontal="center">
           <Row
@@ -87,7 +87,7 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton prefixIcon="home" href="/about" selected={pathname === "/"} />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/about"] && (
@@ -111,7 +111,7 @@ export const Header = () => {
               )}
               {routes["/work"] && (
                 <>
-                  <Row s={{ hide: true }}>
+                  <Row s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="grid"
                       href="/work"
@@ -130,7 +130,7 @@ export const Header = () => {
               )}
               {routes["/blog"] && (
                 <>
-                  <Row s={{ hide: true }}>
+                  <Row s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="book"
                       href="/blog"
@@ -149,7 +149,7 @@ export const Header = () => {
               )}
               {routes["/gallery"] && (
                 <>
-                  <Row s={{ hide: true }}>
+                  <Row s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="gallery"
                       href="/gallery"
