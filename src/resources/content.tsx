@@ -1,15 +1,16 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
+import Link from "next/link";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Fiston",
+  lastName: "Kalambayi",
+  name: `Fiston kalambayi`,
+  role: "web developer",
+  avatar: "/images/avatar.jpg", // optional: set to null if you don't want to display an avatar
+  email: "kalambayifiston7@gmail.com",
+  location: "Africa/Kinshasa", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "French", "Swahili", "Tshiluba", "Lingala"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -25,26 +26,26 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/fiston7-code",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/fiston-kalambayi-5908a8309/?locale=fr",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/fiston9534/",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -60,15 +61,15 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Your idea deserves more than execution — it deserves a problem solver.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Explore</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          my work
         </Text>
       </Row>
     ),
@@ -76,8 +77,9 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+  I’m  <Text as="span" size="xl" weight="strong">Fiston</Text>, a freelance web developer. <br />  I help businesses and startups build modern websites and web apps that attract users and support their growth.
 </>
+  
   ),
 };
 
@@ -102,9 +104,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+       I create web applications that solve real problems for startups, 
+       combining cutting-edge technologies with intuitive, user-friendly interfaces.
+        My passion is turning complex ideas into scalable solutions that delight users and drive growth.
       </>
     ),
   },
@@ -113,24 +115,20 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "FK Studio",
+        timeframe: "2025 - Present",
+        role: "full stack web developer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
+  <>Designed and developed an e-commerce website for <Link href="https://comon-siz.com">Comon Siz</Link>.</>,
+  <>Implemented a responsive UI and product listing experience.</>,
+  <>Focused on performance, usability, and conversion-oriented design.</>,
+],
+
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "E-commerce App Project",
             width: 16,
             height: 9,
           },
@@ -159,8 +157,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Kadea academy",
+        description: <>Studied web development and design principles.</>,
       },
       {
         name: "Build the Future",
@@ -175,7 +173,7 @@ const about: About = {
       {
         title: "Figma",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Able to prototype in Figma  with unnatural speed.</>
         ),
         tags: [
           {
@@ -186,14 +184,14 @@ const about: About = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "E-commerce App Project",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "E-commerce App Project 2",
             width: 16,
             height: 9,
           },
@@ -202,9 +200,17 @@ const about: About = {
       {
         title: "Next.js",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building next gen apps with Next.js + Supabase.</>
         ),
         tags: [
+           {
+            name: "canva",
+            icon: "canva",
+          },
+           {
+            name: "figma",
+            icon: "figma",
+          },
           {
             name: "JavaScript",
             icon: "javascript",
@@ -217,15 +223,39 @@ const about: About = {
             name: "Supabase",
             icon: "supabase",
           },
+           {
+            name: "tailwindcss",
+            icon: "tailwindcss",
+          },
+           {
+            name: "nestjs",
+            icon: "nestjs",
+          },
+           {
+            name: "nodejs",
+            icon: "nodejs",
+          },
+           {
+            name: "prisma",
+            icon: "prisma",
+          },
+           {
+            name: "postgresql",
+            icon: "postgresql",
+          },
+           {
+            name: "typescript",
+            icon: "typescript",
+          },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
     ],

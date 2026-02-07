@@ -16,6 +16,7 @@ import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -93,7 +94,25 @@ export default function About() {
             flex={3}
             horizontal="center"
           >
-            <Avatar src={person.avatar} size="xl" />
+            {/* <Avatar src={person.avatar} size="xl" /> */}
+            <div style={{ 
+  border: '2px solid red', // Si tu vois le cadre rouge mais pas l'image, c'est un problème de chemin
+  borderRadius: '50%', 
+  overflow: 'hidden',
+  width: '160px', 
+  height: '160px',
+  position: 'relative',
+  zIndex: 100 // Force le passage au premier plan
+}}>
+  <Image
+    src={person.avatar}
+    alt={person.name}
+    fill
+    priority
+    style={{ objectFit: 'cover' }}
+  />
+</div>
+        
             <Row gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
