@@ -15,6 +15,7 @@ import {
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -113,6 +114,7 @@ export default async function RootLayout({
           padding="0"
           horizontal="center"
         >
+          
           <RevealFx fill position="absolute">
             <Background
               mask={{
@@ -154,13 +156,18 @@ export default async function RootLayout({
                 color: effects.lines.color,
               }}
             />
+            
           </RevealFx>
           <Flex fillWidth minHeight="16" s={{ hide: true }} />
           <Header />
           <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
+             <WhatsAppButton />
             <Flex horizontal="center" fillWidth minHeight="0">
+             
               <RouteGuard>{children}</RouteGuard>
+               
             </Flex>
+           
           </Flex>
           <Footer />
         </Column>
