@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
   // ✅ Supprime les espaces pour que le lien fonctionne parfaitement
-  const phoneNumber = "243971676949"; 
-  const message = encodeURIComponent("Bonjour Comon-Siz, j'aimerais avoir plus d'informations.");
+  const phoneNumber = "243993769146"; 
+  const message = encodeURIComponent("hey fiston, i would like to know more about your work.");
 
   return (
     <motion.a
